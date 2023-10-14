@@ -12,3 +12,6 @@ $routes->get('/Admin/index', 'Admin::index', ['filter' => 'role:Admin']);
 $routes->get('/Admin/Detail/(:any)', 'Admin::Detail/$1');
 $routes->get('/Admin/Edit/(:segment)', 'Admin::Edit/$1', ['filter' => 'role:Admin']);
 $routes->post('/Admin/save/(:segment)', 'Admin::save/$1');
+$routes->get('/User/Edit/(:segment)', 'User::Edit/$1');
+$routes->post('/User/save/(:segment)', 'User::save/$1');
+$routes->get('/Admin/Hapus/(:segment)', 'Admin::Hapus/$1', ['filter' => 'role:Admin']);

@@ -48,7 +48,7 @@
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="<?= base_url('/User/Edit/' . user()->username); ?>">
       <i class="fas fa-fw fa-edit"></i>
       <span>Edit Profile</span></a>
   </li>

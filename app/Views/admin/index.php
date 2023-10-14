@@ -6,11 +6,10 @@
     <h5 class="text-dark mt-2">User List</h5>
   </div>
 </div>
-
 <div class="row mb-5">
   <div class="col-md-12 mt-5 p-0">
     <div class="card-body bg-white shadow">
-      <a class="btn btn-md btn-primary mb-5 mt-4" href="">Tambah Data</a>
+
       <div class="row">
         <div class="col-md-12">
           <?php if (!empty(session()->getFlashdata('pesan'))) :  ?>
@@ -46,7 +45,7 @@
                   <td class="text-center">
                     <a class="btn btn-sm btn-warning" href="<?= base_url('/Admin/Edit/'  . $user['username']); ?>"><i class="fas fa-edit"></i></a>
                     <a class="btn btn-sm btn-success" href="<?= base_url('/Admin/Detail/' . $user['username']); ?>"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-sm btn-danger" href=""><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-sm btn-danger" href="<?= base_url('/Admin/Hapus/' . $user['username']); ?>"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
               <?php endforeach; ?>

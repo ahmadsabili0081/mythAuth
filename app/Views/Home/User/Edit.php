@@ -3,13 +3,13 @@
 <?= $this->section('contentPage'); ?>
 <div class="row">
   <div class="col text-left shadow p-3 bg-white">
-    <h5 class="text-dark mt-2">Halaman Edit User</h5>
+    <h5 class="text-dark mt-2">Halaman Edit Profile</h5>
   </div>
 </div>
 <div class="row mt-4 shadow">
   <div class="col p-0">
     <div class="card-body bg-white">
-      <form action="<?= base_url('/Admin/save/' . $userDetail['username']); ?>" method="post" enctype="multipart/form-data">
+      <form action="<?= base_url('/User/save/' . $userDetail['username']); ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="userid" value="<?= $userDetail['userid']; ?>">
         <input type="hidden" name="usernameHidden" value="<?= $userDetail['username']; ?>">
         <input type="hidden" name="userImageHidden" value="<?= $userDetail['userImage']; ?>">
@@ -40,7 +40,7 @@
             <small class="text-danger"><?= validation_show_error('userImage'); ?></small>
           </div>
         </div>
-        <a class="btn btn-sm btn-warning" href="<?= base_url('/Admin'); ?>">Kembali</a>
+        <a class="btn btn-sm btn-warning" href="<?= base_url('/User'); ?>">Kembali</a>
         <button class="btn btn-sm btn-primary" type="submit">Simpan</button>
       </form>
     </div>

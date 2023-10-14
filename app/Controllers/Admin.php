@@ -94,4 +94,14 @@ class Admin extends BaseController
       return redirect()->to('/Admin');
     }
   }
+  public function Hapus($data)
+  {
+    $data = $this->userModel->getAllUsers($data);
+    if ($data['username']) {
+      $this->userModel->delete($data['userid']);
+      unlink('images/profile/' . $data['userImage']);
+    }
+    session()->setFlashdata('pesan', 'Data Berhasil Dihapus!');
+    return redirect()->to('/Admin');
+  }
 }
